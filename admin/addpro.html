@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet/less" href="../css/addpro.less">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/angular.js/src/angular.min.js"></script>
+    <script type="text/javascript" src="../js/less.min.js"></script>
+</head>
+<body>
+<header></header>
+<section>
+    <div>
+        <div id="section_div">
+            <div class="form_div">
+                <form action="../data/doaction.php" method="post" enctype="multipart/form-data">
+                    <div>
+                        <p>添加新产品</p>
+                        <div>
+                            <div><span>产品名：</span><p><input name="" type="text"></p></div>
+                            <div><span>产品简介：</span><textarea name="" id="" cols="30" rows="10" ></textarea></div>
+                            <div><span>图片：</span>
+                                <p>
+                                <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                                <input name="userfile" type="file" id="userfile">
+                                <span id="file_names"></span>
+                                </p></div>
+                            <div><span>必买家：</span><p><input name="" type="text">元</p><span>必卖家：</span><p><input name="" type="text">元</p></div>
+                            <div><span>买家保证金：</span><p><input name="" type="text">%</p><span>必卖保证金：</span><p><input name="" type="text">%</p></div>
+                            <div><span>最小单位：</span><p><input name="" type="text"></p><span>佣金：</span><p><input name="" type="text">%</p></div>
+                            <div><span>包装鉴定费：</span><p><input name="" type="text">%</p></div>
+                            <div><input name="upload" type="submit" value="提交"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+<script type="text/javascript" src="../js/addpro.js"></script>
+</body>
+</html>

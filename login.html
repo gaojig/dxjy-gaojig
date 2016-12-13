@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新航线</title>
+    <link rel="stylesheet/less" href="css/login.less">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/less.min.js"></script>
+</head>
+<body>
+<header></header>
+<section>
+    <div>
+        <div>
+            <img src="image/New-01.jpg" alt="">
+        </div>
+        <div>
+            <form action="http://www.xhangxian.com/dxjy/login.php" method="post" id="form">
+                <div>
+                    <input type="text" name="user" maxlength="20" autocomplete="off" id="user">
+                    <span>用户名</span>
+                </div>
+                <div>
+                    <input type="password" name="password" maxlength="20" autocomplete="off" id="password">
+                    <span>密码</span>
+                </div>
+                <div>
+                    <b></b>
+                    <input type="text" name="VerificationCode" maxlength="4" id="Verification" autocomplete="off">
+                    <span>验证码</span>
+                </div>
+                <p class="VerI"></p>
+                <div>
+                    <button type="submit" disabled="disabled" id="button">登录</button>
+                </div>
+                <div>
+                    <a href="http://www.xhangxian.com/dxjy/register.html">注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<footer></footer>
+<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

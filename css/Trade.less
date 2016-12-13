@@ -1,0 +1,127 @@
+*{
+  margin: 0;padding: 0;
+  font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, Verdana, Tahoma, sans-serif;
+  font-size: 14px;
+}
+a{
+  text-decoration: none;
+}
+ul,li{
+  list-style-type: none;
+}
+//***** ***** ***** body ***** ***** *****Trade
+body{
+  //***** ***** ***** header ***** ***** *****
+  >header{
+    >div{
+      >ul{
+        max-width: 1140px;
+        margin: 0 auto;
+        text-align: justify;
+        height: 62px;
+        >li:not(:nth-child(9)){
+          display: inline-block;
+          vertical-align: top;
+          >a{
+            display: block;
+            line-height: 62px;
+            color: #666;
+            padding: 0 10px;
+            >img{
+              display: block;
+            }
+          }
+          >a:hover{
+            color: #fff;
+            background-color: #32A5E7;
+            transition: all 0.45s linear;
+          }
+          >.default{
+            color: #fff;
+            background-color: #32A5E7;
+          }
+        }
+        >li:nth-child(1)>a{
+          padding: 0;
+        }
+        >li:nth-child(9){
+          width: 100%;display: inline-block;
+        }
+      }
+    }
+  }
+  //***** ***** ***** section ***** ***** *****
+  >section{
+    background-color: #EEEEEE;
+    padding: 0 0 17px 0;
+    >div{
+      max-width: 1140px;
+      margin: 0 auto;
+      >p{
+        line-height: 72px;
+        >a{
+          color: #666;
+        }
+      }
+      >div{
+        >ul{
+          >li{
+            display: none;
+            width: 270px;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #fff;
+            margin: 0 7px 7px 7px;
+            >a{
+              display: block;
+              >img{
+                display: block;
+                margin: 0 auto;
+              }
+            }
+            >h4{
+              padding: 10px 5px;
+              >a{
+                color: #666;
+              }
+            }
+            >ul{
+              text-align: justify;
+              height: 40px;
+              >li{
+                display: inline-block;
+                >a{
+                  color: #666;
+                }
+              }
+            }
+          }
+          >li.li_display{
+            display: inline-block;
+          }
+        }
+      }
+      >div.transaction{
+        text-align: right;
+        >a{
+          text-align: center;
+          display: inline-block;
+          width: 42px;line-height: 18px;
+          color: #666;
+          border: 1px solid #ccc;
+          margin: 16px 10px 0 0;
+          padding: 5px 10px;
+          border-radius: 5px;
+          background-color: #FFFFFF;
+        }
+      }
+    ;
+    }
+  }
+  >footer{
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 63px;
+  }
+}

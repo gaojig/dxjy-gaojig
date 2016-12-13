@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet/less" href="../css/product.less">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/less.min.js"></script>
+    <script type="text/javascript" src="../js/src/angular.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/kindeditor/kindeditor.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/kindeditor/lang/zh_CN.js"></script>
+</head>
+<body>
+<header></header>
+<section id="section_div" ng-app="myApp" ng-controller="siteCtrl">
+    <div>
+        <div>
+            <div class="form_div">
+                <form action="../data/doaction.php" method="post" enctype="multipart/form-data">
+                    <div>
+                        <span>添加新产品</span>
+                        <p>
+                            <span></span>
+                        </p>
+                        <div>
+                            <div><span>产品名：</span><p><input name="chanpin" type="text"></p></div>
+                            <div><span>产品简介：</span><textarea name="pDesc" id="editor_id" style="width:100%;height:150px;"></textarea></div>
+                            <div>
+                                <span>图片：</span>
+                                <p>
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                                    <input name="userfile" type="file" id="userfile">
+                                </p>
+                            </div>
+                            <div><span>必买家：</span><p><input name="buy" type="text">元</p><span>必卖家：</span><p><input name="sell" type="text">元</p></div>
+                            <div><span>买家保证金：</span><p><input name="buybzj" type="text">%</p><span>必卖保证金：</span><p><input name="sellbzj" type="text">%</p></div>
+                            <div><span>最小单位：</span><p><input name="zuixiao" type="text"></p><span>佣金：</span><p><input name="yongjin" type="text">%</p></div>
+                            <div><span>包装鉴定费：</span><p><input name="baozhuang" type="text">%</p><span>数量：</span><p><input name="datas" type="text"></p></div>
+                            <div><input name="upload" type="submit" value="提交" class="TiJiaoAnNiu"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <ul>
+                <li class="section_default">产品管理<span class="section_span"></span></li>
+                <li>出价管理<span></span></li>
+                <li>订单管理<span></span></li>
+                <li>用户管理<span></span></li>
+            </ul>
+            <div class="section_details">
+                <span>产品管理</span>
+                <p>
+                    <span style="width: 72px;"></span>
+                </p>
+                <div>
+                    <p>
+                        <a href="addpro.html" class="addpro">添加新产品</a>
+                    </p>
+                    <table cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td>产品名</td>
+                            <td>必买价</td>
+                            <td>比卖价</td>
+                            <td>最小单位</td>
+                            <td>佣金</td>
+                            <td>包装鉴定费</td>
+                            <td>成交量</td>
+                            <td>数量</td>
+                            <td>操作</td>
+                        </tr>
+                        <tr ng-repeat="x in cp">
+                            <td>{{x.chanpin}}</td>
+                            <td>{{x.buy}}</td>
+                            <td>{{x.sell}}</td>
+                            <td>{{x.zuixiao}}</td>
+                            <td>{{x.yongjin}}</td>
+                            <td>{{x.baozhuang}}</td>
+                            <td>{{x.chengjiao}}</td>
+                            <td>{{x.datas}}</td>
+                            <td>
+                                <a href="#" class="edit" name="{{x.id}}">编辑</a>
+                                <a href="#" class="delete" name="{{x.id}}">删除</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><a href="#" class="a-left">上一页</a><a href="#" class="a-yeshu">1</a><a href="#" class="a-right">下一页</a></p>
+                </div>
+            </div>
+            <div>
+                <span>出价管理</span>
+                <p><span></span></p>
+                <div>
+                    <p>
+                        <span>产品&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <select class="select_op" name="chanpin_st">
+                            <option>-请选择-</option>
+                            <option ng-repeat="x in sl">
+                                {{x}}
+                            </option>
+                        </select>
+                    </p>
+                    <table cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td>出价人</td>
+                            <td>产品</td>
+                            <td>方向</td>
+                            <td>单价</td>
+                            <td>数量</td>
+                            <td>出价时间</td>
+                            <td>操作</td>
+                        </tr>
+                        <tr ng-repeat="x in cj" name="{{x.chanpin}}">
+                            <td>{{x.user}}</td>
+                            <td>{{x.chanpin}}</td>
+                            <td>{{x.act}}</td>
+                            <td>{{x.UnitPrice}}</td>
+                            <td>{{x.datas}}</td>
+                            <td>{{x.time}}</td>
+                            <td><a href="#">删除</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><a href="#" class="a-left">上一页</a><a href="#" class="a-yeshu">1</a><a href="#" class="a-right">下一页</a></p>
+                </div>
+            </div>
+            <div>
+                <span>订单管理</span>
+                <p>
+                    <span></span>
+                </p>
+                <div>
+                    <p>
+                        <span>产品&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <select><option>-请选择-</option></select>
+                    </p>
+                    <table cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td>对手</td>
+                            <td>手机号</td>
+                            <td>出价产品</td>
+                            <td>方向</td>
+                            <td>单价</td>
+                            <td>数量</td>
+                            <td>出价时间</td>
+                            <td>状态</td>
+                            <td>操作</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><a href="#" class="a-left">上一页</a><a href="#" class="a-yeshu">1</a><a href="#" class="a-right">下一页</a></p>
+                </div>
+            </div>
+            <div>
+                <span>用户管理</span>
+                <p>
+                    <span></span>
+                </p>
+                <div>
+                    <table cellspacing="0" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <td>用户名</td>
+                            <td>姓名</td>
+                            <td>手机号</td>
+                            <td>身份证号</td>
+                            <td>银行卡号</td>
+                            <td>地址</td>
+                            <td>注册时间</td>
+                        </tr>
+                        <tr ng-repeat="x in yh">
+                            <td>{{x.user}}</td>
+                            <td>{{x.name}}</td>
+                            <td>{{x.phone}}</td>
+                            <td>{{x.idcard}}</td>
+                            <td>{{x.bank}}</td>
+                            <td>{{x.province+x.city+x.region+x.address}}</td>
+                            <td>{{x.time}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p><a href="#" class="a-left">上一页</a><a href="#" class="a-yeshu">1</a><a href="#" class="a-right">下一页</a></p>
+                </div>
+            </div>
+            <div class="editDetails">
+                <form action="../data/doaction.php" method="post" enctype="multipart/form-data">
+                    <div>
+                        <span>添加新产品</span>
+                        <p>
+                            <span></span>
+                        </p>
+                        <div>
+                            <div><span>产品名：</span><p><input name="chanpin" type="text"></p></div>
+                            <div><span>产品简介：</span><textarea name="pDesc" id="editor_ids" style="width:100%;height:150px;"></textarea></div>
+                            <div>
+                                <span>图片：</span>
+                                <p>
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+                                    <input name="userfile" type="file" id="userfiles">
+                                </p>
+                            </div>
+                            <div><span>必买家：</span><p><input name="buy" type="text">元</p><span>必卖家：</span><p><input name="sell" type="text">元</p></div>
+                            <div><span>买家保证金：</span><p><input name="buybzj" type="text">%</p><span>必卖保证金：</span><p><input name="sellbzj" type="text">%</p></div>
+                            <div><span>最小单位：</span><p><input name="zuixiao" type="text"></p><span>佣金：</span><p><input name="yongjin" type="text">%</p></div>
+                            <div><span>包装鉴定费：</span><p><input name="baozhuang" type="text">%</p><span>数量：</span><p><input name="datas" type="text">%</p></div>
+                            <div><input name="upload" type="submit" value="提交" class="TiJiaoAnNiu"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="delete_Confirm">
+        <div>
+            <div>
+                <span>提示</span>
+                <span id="Span_delete_Cancel">
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <div id="promptBox">
+                <div>
+                    <img src="../image/Confirm-01.png" alt="">
+                    <span>您确定要删除该产品？</span>
+                </div>
+                <div>
+                    <button type="button" id="delete_Determine">确定</button>
+                    <button type="button" id="delete_Cancel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+<script type="text/javascript" src="../js/producr.js"></script>
+<script>
+    KindEditor.ready(function(K) {
+        window.editor = K.create('#editor_id');
+        window.editor = K.create('#editor_ids');
+    });
+</script>
+</body>
+</html>

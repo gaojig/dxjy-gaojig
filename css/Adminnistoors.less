@@ -1,0 +1,181 @@
+*{
+  margin: 0;padding: 0;
+  font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, Verdana, Tahoma, sans-serif;
+  font-size: 14px;
+}
+a{
+  text-decoration: none;
+}
+ul,li{
+  list-style-type: none;
+}
+//***** ***** ***** body ***** ***** *****
+body{
+  //***** ***** ***** header ***** ***** *****
+  >header{
+    >div{
+      >ul{
+        max-width: 1140px;
+        margin: 0 auto;
+        text-align: justify;
+        height: 62px;
+        >li:not(:nth-child(9)){
+          display: inline-block;
+          vertical-align: top;
+          >a{
+            display: block;
+            line-height: 62px;
+            color: #666;
+            padding: 0 10px;
+            >img{
+              display: block;
+            }
+          }
+          >a:hover{
+            color: #fff;
+            background-color: #32A5E7;
+            transition: all 0.45s linear;
+          }
+          >.default{
+            color: #fff;
+            background-color: #32A5E7;
+          }
+        }
+        >li:nth-child(1)>a{
+          padding: 0;
+        }
+        >li:nth-child(9){
+          width: 100%;display: inline-block;
+        }
+      }
+    }
+  }
+  //***** ***** ***** section ***** ***** *****
+  >section{
+    background-color: #EEEEEE;
+    >div{
+      background: url("../image/beijing-01.jpg") no-repeat;
+      background-position: top center;
+      padding: 89px 0 0 0;
+      margin: 0 0 100px 0;
+      >div:nth-child(1){
+        background: url("../image/beijing-00.jpg") no-repeat center;
+        background-size: 100% 659px;
+        height: 659px;  max-width: 1000px;
+        margin: auto;
+        position: relative;
+        >ul{
+          position: absolute;z-index: 5;
+          top: 0;left: 0;
+          >li{
+            box-sizing: border-box;
+            width: 190px;
+            line-height: 60px;
+            text-align: center;
+            color: #999;
+            border-bottom: 1px solid #AF2131;
+            position: relative;
+            cursor: pointer;
+            >span:nth-child(1){
+              position: absolute;z-index: 10;
+              top: 5px;left: 42px;
+              width: 21px;height: 21px;
+              display: inline-block;
+            }
+            >span:nth-child(2){
+              display: none;
+              position: absolute;z-index: 10;
+              top: 21px;right: -8px;
+              width: 16px;height: 16px;
+              transform: rotate(-45deg);
+              background-color: #D42F3D;
+            }
+            >span:nth-child(2).section_span{
+              display: block;
+            }
+          }
+          li.section_default{
+            color: #fff;
+          }
+        }
+        >div{
+          display: none;
+          color: #555;
+          position: absolute;z-index: 5;
+          top: 0;left: 190px;
+          width: 750px;padding: 30px;
+          >span{
+            font-size: 18px;
+            padding: 0 0 10px 0;
+            display: inline-block;
+          }
+          >p{
+            width: 100%;height: 4px;
+            background-color: #EEEEEE;
+            >span{
+              display: block;height: 4px;
+              background-color: #AF2131;
+            }
+          }
+        }
+        >div:nth-child(2),>div:nth-child(3),>div:nth-child(4),>div:nth-child(5){
+          >div:nth-child(3){
+            >table{
+              width: 100%;
+              >tbody{
+                text-align: center;
+                >tr:nth-child(odd){
+                  >td{
+                    background-color: #EEEEEE;
+                  }
+                }
+                >tr:nth-child(ever){
+                  >td{
+                    background-color: #FFFFFF;
+                  }
+                }
+                >tr:not(:nth-child(1)){
+                  height: 80px;line-height: 80px;
+                  display: none;
+                }
+                >tr:nth-child(1){
+                  >td{
+                    height: 40px;line-height: 40px;
+                  }
+                }
+                >tr.displayTr{
+                  display: table-row;
+                }
+              }
+            }
+            >p{
+              text-align: right;
+              >a{
+                text-align: center;
+                display: inline-block;
+                width: 42px;line-height: 18px;
+                color: #CCCCCC;
+                border: 1px solid #ccc;
+                margin: 16px 10px 0 0;
+                padding: 5px 10px;
+                border-radius: 5px;
+              }
+              >a:nth-child(2){
+                color: #D42F3D;
+              }
+            }
+          }
+        }
+        .section_details{
+          display: block;
+        }
+      }
+    }
+  }
+  >footer{
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 63px;
+  }
+}

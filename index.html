@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新航线</title>
+    <link rel="stylesheet/less" href="css/Trade.less">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/less.min.js"></script>
+    <script type="text/javascript" src="js/src/angular.min.js"></script>
+</head>
+<body>
+    <header></header>
+    <section>
+        <div>
+            <p><a href="http://www.xhangxian.com/">新航线 </a> >> <a href="#">定向交易</a></p>
+            <div ng-app="myApp" ng-controller="siteCtrl">
+                <ul class="myAppUl">
+                    <li ng-repeat="x in cp">
+                        <a href="Package.html?id={{x.id}}"><img ng-src="http://www.xhangxian.com/dxjy/data/{{x.tupian}}" alt="" width="250px" height="250px"></a>
+                        <h4><a href="Package.php?id={{x.id}}">{{x.chanpin}}</a></h4>
+                        <ul>
+                            <li><a href="Package.php?id={{x.id}}">{{x.buy}}<br><img src="image/Package-10.png" alt="" width="16px" height="16px">必买价</a></li>
+                            <li><a href="Package.php?id={{x.id}}">{{x.sell}}<br><img src="image/Package-11.png" alt="" width="16px" height="16px">比卖价</a></li>
+                            <li><a href="Package.php?id={{x.id}}">{{x.chengjiao}}<br><img src="image/Package-12.png" alt="" width="16px" height="16px">成交量</a></li>
+                            <li style="width: 100%;height: 0"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="transaction">
+                <a href="#" class="a-left">上一页</a><a href="#" class="a-yeshu">1</a><a href="#" class="a-right">下一页</a>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+<script type="text/javascript" src="js/Trade.js"></script>
+</body>
+</html>

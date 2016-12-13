@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新航线</title>
+    <link rel="stylesheet/less" href="css/Package.less">
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/less.min.js"></script>
+    <script type="text/javascript" src="js/src/angular.min.js"></script>
+</head>
+<body>
+<header></header>
+<section ng-app="myApp" ng-controller="siteCtrl">
+    <div>
+        <p><a href="http://www.xhangxian.com/">新航线 </a> >> <a href="index.html">定向交易</a> >> <a href="#">{{cp.chanpin}}</a></p>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <img ng-src="http://www.xhangxian.com/dxjy/data/{{cp.tupian}}" alt="" width="200" height="300">
+                    </div>
+                    <div>
+                        <p>必买价&nbsp;&nbsp;&nbsp;&nbsp;{{cp.buy}}元</p>
+                        <p>必卖价&nbsp;&nbsp;&nbsp;&nbsp;{{cp.sell}}元</p>
+                        <p>成交量&nbsp;&nbsp;&nbsp;&nbsp;{{cp.sell}}套</p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <h2>{{cp.chanpin}}</h2>
+                            <p>
+                                商品介绍：<br>
+                                {{cp.pDesc}}
+                            </p>
+                            <p>
+                                交易保证金：&nbsp;买家{{cp.buybzj}}&nbsp;,&nbsp;卖家{{cp.sellbzj}}%
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <input  type="text" ng-model="Bquantity" id="buyUnitPrice">&nbsp;元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" ng-model="Bprice" id="buyset">&nbsp;套
+                            </div>
+                            <div>
+                                <button type="button" id="buy">买入</button>
+                                <span>共计：{{Bprice*Bquantity | currency:"￥"}}元</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <input  type="text" ng-model="Squantity" id="sellUnitPrice">&nbsp;元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" ng-model="Sprice" id="sellset">&nbsp;套
+                            </div>
+                            <div>
+                                <button type="button" id="sell">卖出</button>
+                                <span>共计：{{Sprice*Squantity | currency:"￥"}}元</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer></footer>
+<script type="text/javascript" src="js/Package.js"></script>
+</body>
+</html>

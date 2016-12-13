@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet/less" href="../css/personal.less">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/less.min.js"></script>
+    <script type="text/javascript" src="../js/src/angular.min.js"></script>
+</head>
+<body>
+    <header></header>
+    <section>
+        <div>
+            <div id="section_div" ng-app="myApp" ng-controller="siteCtrl"> <!-- -->
+                <ul>
+                    <li class="section_default">
+                        <span><img src="../image/00-1.svg"></span>交易明细<span class="section_span"></span>
+                    </li>
+                    <li>
+                        <span><img src="../image/01-1.svg"></span>订单明细<span></span>
+                    </li>
+                    <li>
+                        <span><img src="../image/02-1.svg"></span>账户充值<span></span>
+                    </li>
+                    <li>
+                        <span><img src="../image/03-1.svg"></span>账户提现<span></span>
+                    </li>
+                    <li>
+                        <span><img src="../image/04-1.svg"></span>安全中心<span></span>
+                    </li>
+                </ul>
+                <div class='section_details'>
+                    <span>历史交易明细</span>
+                    <p>
+                        <span></span>
+                    </p>
+                    <div>
+                        <table cellspacing='0' cellpadding='0'>
+                            <tbody>
+                            <tr>
+                                <td>商品名</td><td>交易方向</td><td>单价</td><td>数量</td><td>交易金额</td><td>时间</td><td>状态</td><td>操作</td>
+                                </tr>
+                            <!--<tr ng-repeat='x in jy'>
+                                <td>{{x.CommodityName}}</td>
+                                <td>{{x.TradingDirection}}</td>
+                                <td>{{x.UnitPrice}}</td>
+                                <td>{{x.quantity}}</td>
+                                <td>{{x.TransactionAmount}}</td>
+                                <td>{{x.time}}</td>
+                                <td>{{x.state}}</td>
+                                <td>{{x.operation}}</td>
+                                </tr>-->
+                            </tbody>
+                        </table>
+                        <p>
+                            <a href='#' class='a-left'>上一页</a>
+                            <a href='#' class='a-yeshu'>1</a>
+                            <a href='#'class='a-right'>下一页</a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <span>订单明细</span>
+                    <p>
+                        <span></span>
+                    </p>
+                    <div>
+                        <table cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr><td>商品名</td><td>交易方向</td><td>单价</td><td>数量</td><td>交易金额</td><td>时间</td><td>状态</td><td>跟踪</td></tr>
+                            <!--<tr>
+                                <td>{{x.CommodityName}}</td>
+                                <td>{{x.TradingDirection}}</td>
+                                <td>{{x.UnitPrice}}</td>
+                                <td>{{x.quantity}}</td>
+                                <td>{{x.TransactionAmount}}</td>
+                                <td>{{x.time}}</td>
+                                <td>{{x.state}}</td>
+                                <td>{{x.Track}}</td>
+                            </tr>-->
+                            </tbody>
+                        </table>
+                        <p><a href="#" class="a-left">上一页</a><a href="#" class="a-yeshu">1</a><a href="#" class="a-right">下一页</a></p>
+                    </div>
+                </div>
+                <div>
+                    <span>账户充值</span>
+                    <p>
+                        <span></span>
+                    </p>
+                </div>
+                <div>
+                    <span>账户提现</span>
+                    <p>
+                        <span></span>
+                    </p>
+                </div>
+                <div>
+                    <span>安全中心</span>
+                    <p>
+                        <span></span>
+                    </p>
+                    <div>
+                    <!--<ul>
+                        <li>
+                            <span>绑定银行卡</span>
+                            <span>{{aq.A}}</span>
+                            <a href='#'>修改</a>
+                        </li>
+                        <li>
+                            <span>绑定手机</span>
+                            <span>{{aq.B}}</span>
+                            <a href='#'>修改</a>
+                        </li>
+                        <li>
+                            <span>实名认证</span>
+                            <span>{{aq.C}}</span>
+                            <a href='#'>修改</a>
+                        </li>
+                        <li>
+                            <span>交易密码</span>
+                            <span>{{aq.D}}</span>
+                            <a href='#'>修改</a>
+                        </li>
+                        </ul>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+<script type="text/javascript" src="../js/personal.js"></script>
+</body>
+</html>

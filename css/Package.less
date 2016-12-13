@@ -1,0 +1,163 @@
+*{
+  margin: 0;padding: 0;
+  font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, Verdana, Tahoma, sans-serif;
+  font-size: 14px;
+}
+a{
+  text-decoration: none;
+}
+ul,li{
+  list-style-type: none;
+}
+//***** ***** ***** body ***** ***** *****
+body{
+  //***** ***** ***** header ***** ***** *****Package
+  >header{
+    >div{
+      >ul{
+        max-width: 1140px;
+        margin: 0 auto;
+        text-align: justify;
+        height: 62px;
+        >li:not(:nth-child(9)){
+          display: inline-block;
+          vertical-align: top;
+          >a{
+            display: block;
+            line-height: 62px;
+            color: #666;
+            padding: 0 10px;
+            >img{
+              display: block;
+            }
+          }
+          >a:hover{
+            color: #fff;
+            background-color: #32A5E7;
+            transition: all 0.45s linear;
+          }
+          >.default{
+            color: #fff;
+            background-color: #32A5E7;
+          }
+        }
+        >li:nth-child(1)>a{
+          padding: 0;
+        }
+        >li:nth-child(9){
+          width: 100%;display: inline-block;
+        }
+      }
+    }
+  }
+  //***** ***** ***** section ***** ***** *****
+  >section{
+    background-color: #EEEEEE;
+    height: 849px;
+    >div{
+      max-width: 1140px;
+      margin: 0 auto;
+      >p{
+        line-height: 72px;
+        >a{
+          color: #666;
+        }
+      }
+      >div{
+        >div{
+          box-sizing: border-box;
+          height: 630px;  width: 1140px;
+          padding: 28px;
+          margin:0 auto;
+          background-color: #fff;
+          >div:nth-child(1){
+            float: left;
+            >div:nth-child(1){
+              border: 2px solid #DBDBDB;
+              margin:0 0 18px 0;
+              >img{
+                display: block;
+              }
+            }
+            >div:nth-child(2){
+              padding: 20px;
+              background-color: #EEEEEE;
+              display: inline-block;
+              >p{
+                color:#666;
+                width: 164px;line-height: 32px;
+              }
+            }
+          }
+          >div:nth-child(2){
+            float: right;
+            width: 820px;
+            >div:nth-child(1){
+              >div{
+                >h2{
+                  font-size: 24px;
+                  color: #555555;
+                  line-height: 56px;
+                }
+                >p{
+                  color: #555555;
+                }
+                >p:nth-child(2){
+                  height: 200px;
+                }
+                >p:nth-child(3){
+                  line-height: 20px;
+                  background-color: #FFF7EE;
+                  padding: 15px;
+                }
+              }
+            }
+            >div:nth-child(2){
+              >div{
+                display: inline-block;
+                padding: 28px 6px;
+                >div:nth-child(1){
+                  >input{
+                    box-sizing: border-box;
+                    width: 100px;
+                    border: 1px solid #EEEEEE;
+                    padding: 10px;
+                    margin: 0 0 27px 0;
+                  }
+                }
+                >div:nth-child(2){
+                  >button{
+                    background-color: #D42F3D;
+                    color: #fff;
+                    border: none;
+                    width: 132px;height: 36px;
+                    margin: 0 38px 0 0;
+                  }
+                }
+              }
+              >div:nth-child(2){
+                float: right;
+                margin:0 63px 0 0;
+                >div:nth-child(2){
+                  >button{
+                    background-color: #fff;
+                    color: #D42F3D;
+                    border:1px solid #D42F3D;
+                    width: 132px;height: 36px;
+                    margin: 0 38px 0 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  >footer{
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 63px;
+  }
+}

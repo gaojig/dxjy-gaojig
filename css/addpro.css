@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, Verdana, Tahoma, sans-serif;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style-type: none;
+}
+body > header > div > ul {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: justify;
+  height: 62px;
+}
+body > header > div > ul > li:not(:nth-child(9)) {
+  display: inline-block;
+  vertical-align: top;
+}
+body > header > div > ul > li:not(:nth-child(9)) > a {
+  display: block;
+  line-height: 62px;
+  color: #666;
+  padding: 0 10px;
+}
+body > header > div > ul > li:not(:nth-child(9)) > a > img {
+  display: block;
+}
+body > header > div > ul > li:not(:nth-child(9)) > a:hover {
+  color: #fff;
+  background-color: #32A5E7;
+  transition: all 0.45s linear;
+}
+body > header > div > ul > li:not(:nth-child(9)) > .default {
+  color: #fff;
+  background-color: #32A5E7;
+}
+body > header > div > ul > li:nth-child(1) > a {
+  padding: 0;
+}
+body > header > div > ul > li:nth-child(9) {
+  width: 100%;
+  display: inline-block;
+}
+body > section {
+  background-color: #EEEEEE;
+}
+body > section > div {
+  background: url("../image/beijing-01.jpg") no-repeat;
+  background-position: top center;
+  padding: 89px 0 0 0;
+  margin: 0 0 100px 0;
+}
+body > section > div > div {
+  background-color: #FFFFFF;
+  height: 659px;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+body > section > div > div > div.form_div > form > div {
+  padding: 0 0 0 21px;
+}
+body > section > div > div > div.form_div > form > div > p {
+  line-height: 27px;
+  font-size: 16px;
+}
+body > section > div > div > div.form_div > form > div > div {
+  padding: 24px 0 0 0;
+}
+body > section > div > div > div.form_div > form > div > div > div {
+  margin: 0 0 16px 0;
+}
+body > section > div > div > div.form_div > form > div > div > div > span {
+  text-align: left;
+  display: inline-block;
+  width: 96px;
+}
+body > section > div > div > div.form_div > form > div > div > div > p {
+  display: inline-block;
+  width: 210px;
+}
+body > section > div > div > div.form_div > form > div > div > div > p > input {
+  margin: 0 10px 0 0;
+}
+body > section > div > div > div.form_div > form > div > div > div > textarea {
+  width: 540px;
+  height: 240px;
+  resize: none;
+}
+body > section > div > div > div.form_div > form > div > div > div:nth-child(2) > span {
+  vertical-align: top;
+}
+body > section > div > div > div.form_div > form > div > div > div:nth-child(3) > span {
+  display: inline-block;
+  vertical-align: top;
+}
+body > section > div > div > div.form_div > form > div > div > div:nth-child(3) > p {
+  position: relative;
+  height: 56px;
+}
+body > section > div > div > div.form_div > form > div > div > div:nth-child(3) > p > a {
+  position: absolute;
+  z-index: 10;
+  width: 140px;
+  line-height: 56px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #A9A9A9;
+}
+body > section > div > div > div.form_div > form > div > div > div:nth-child(3) > p > a > input {
+  position: absolute;
+  z-index: 1;
+  width: 140px;
+  height: 56px;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+body > section > div > div > div.form_div > form > div > div > div:nth-child(3) > p > span {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 160px;
+  width: 500px;
+  height: 56px;
+  line-height: 56px;
+}
+body > footer {
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 63px;
+}

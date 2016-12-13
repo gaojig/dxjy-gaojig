@@ -1,0 +1,135 @@
+*{
+  margin: 0;padding: 0;
+  font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, Verdana, Tahoma, sans-serif;
+  font-size: 14px;
+}
+a{
+  text-decoration: none;
+}
+ul,li{
+  list-style-type: none;
+}
+//***** ***** ***** body ***** ***** *****
+body{
+  //***** ***** ***** header ***** ***** *****
+  >header{
+    >div{
+      >ul{
+        max-width: 1140px;
+        margin: 0 auto;
+        text-align: justify;
+        height: 62px;
+        >li:not(:nth-child(9)){
+          display: inline-block;
+          vertical-align: top;
+          >a{
+            display: block;
+            line-height: 62px;
+            color: #666;
+            padding: 0 10px;
+            >img{
+              display: block;
+            }
+          }
+          >a:hover{
+            color: #fff;
+            background-color: #32A5E7;
+            transition: all 0.45s linear;
+          }
+          >.default{
+            color: #fff;
+            background-color: #32A5E7;
+          }
+        }
+        >li:nth-child(1)>a{
+          padding: 0;
+        }
+        >li:nth-child(9){
+          width: 100%;display: inline-block;
+        }
+      }
+    }
+  }
+  //***** ***** ***** section ***** ***** *****
+  >section{
+    height: 849px;
+    background: url("../image/New-00.jpg") no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    padding: 120px 0 0 0;
+    >div{
+      width: 320px;
+      margin: 0 auto;
+      >div:nth-child(1){
+        >img{
+          display: block;
+          height: 109px;width: 320px;
+        }
+      }
+      >div:nth-child(2){
+        background-color: rgba(255,255,255,0.8);
+        padding: 40px 19px;
+        position: relative;
+        >form{
+          >div{
+            position: relative;
+            >input{
+              box-sizing: border-box;
+              padding: 0 0 0 63px;
+              border: 1px solid #F0F0F0;
+              height: 38px;line-height: 38px;
+              width: 100%;
+              margin: 0 0 18px 0;
+              outline:medium;//去掉默认样式
+            }
+            >span{
+              position: absolute;z-index: 5;
+              top: 10px;left: 12px;
+              color: #555555;
+              font-weight: 500;
+            }
+            >button{
+              display: block;
+              width: 100%;
+              height: 40px;
+              line-height: 40px;
+              background-color: #D42F3D;
+              border: none;
+              color: #FFFFFF;
+              font-size: 16px;
+              margin: 0 0 18px 0;
+            }
+            >a{
+              box-sizing: border-box;
+              text-align: center;
+              display: block;
+              width: 100%;
+              height: 40px;
+              line-height: 40px;
+              background-color: #FFFFFF;
+              border: 1px solid #D42F3D;
+              color: #D42F3D;
+              font-size: 16px;
+            }
+          }
+          >p{
+            position: absolute;z-index: 10;
+            top:152px;
+            left: 211px;
+            width: 90px; height: 38px;
+            line-height: 38px;
+            text-align: center;
+            background-color: #E6E6E6;
+            letter-spacing: 5px;
+          }
+        }
+      }
+    }
+  }
+  >footer{
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 63px;
+  }
+}
